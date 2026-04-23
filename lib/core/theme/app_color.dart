@@ -14,4 +14,5 @@ class AppColors {
   static const Color chatSelectedCourseColor = Color(0xFFD3E8FF);
   static const Color chatUnreadMessageCountColor = Color(0xFFE61D1D);
   static const Color chatUnreadMessageCountTextColor = Color(0xFFFFFFFF);
+  static const Color chatSendIconColor = Color.fromARGB(255, 10, 68, 149);
 }

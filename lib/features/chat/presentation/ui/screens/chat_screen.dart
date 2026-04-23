@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:learning_management_system/features/chat/data/models/message_model.dart';
 import 'package:learning_management_system/features/chat/presentation/ui/widgets/course_bubble.dart';
 import 'package:learning_management_system/features/chat/presentation/ui/widgets/message_bubble.dart';
+import 'package:learning_management_system/features/chat/presentation/ui/widgets/send_message_widget.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
-
   @override
   State<ChatScreen> createState() => _ChatScreenState();
 }
@@ -41,7 +41,7 @@ class _ChatScreenState extends State<ChatScreen> {
               },
             ),
           ),
-          SizedBox(height: 12),
+          SizedBox(height: 8),
           Expanded(
             child: ListView.builder(
               itemCount: 10,
@@ -59,7 +59,9 @@ class _ChatScreenState extends State<ChatScreen> {
               },
             ),
           ),
-          SizedBox(height: 12),
+          SizedBox(height: 8),
+          SendMessageWidget(chatId: selectedCourseId.toString()),
+          SizedBox(height: 8),
         ],
       ),
     );
