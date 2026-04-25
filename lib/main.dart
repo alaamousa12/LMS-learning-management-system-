@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:learning_management_system/features/chat/presentation/ui/screens/chat_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart'; // 1. أضف الاستيراد
+import 'features/auth/presentation/ui/screens/login_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -14,6 +15,20 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: ChatScreen());
+    // 2. تغليف التطبيق بـ ScreenUtilInit
+    return ScreenUtilInit(
+      // مقاس الشاشة الذي بنيت عليه التصميم (مثلاً مقاس iPhone 13 أو Android standard)
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Clean Arch App',
+          // 3. تأكد أن home داخل الـ builder
+          home: const LoginScreen(),
+        );
+      },
+    );
   }
 }
