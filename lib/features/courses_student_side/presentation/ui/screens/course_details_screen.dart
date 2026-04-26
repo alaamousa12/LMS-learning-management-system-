@@ -117,9 +117,7 @@ class CourseDetailsScreen extends StatelessWidget {
   }
 }
 
-
 /// HEADER
-
 
 class _HeaderSection extends StatelessWidget {
   const _HeaderSection();
@@ -209,9 +207,7 @@ class _HeaderSection extends StatelessWidget {
   }
 }
 
-
 /// ENROLL BUTTON
-
 
 class _EnrollButton extends StatelessWidget {
   const _EnrollButton();
@@ -243,9 +239,7 @@ class _EnrollButton extends StatelessWidget {
   }
 }
 
-
 /// ABOUT SECTION
-
 
 class _AboutSection extends StatelessWidget {
   const _AboutSection();
@@ -284,9 +278,7 @@ class _AboutSection extends StatelessWidget {
   }
 }
 
-
 /// TITLE
-
 
 class _CourseContentTitle extends StatelessWidget {
   const _CourseContentTitle();
@@ -312,9 +304,7 @@ class _CourseContentTitle extends StatelessWidget {
   }
 }
 
-
 /// SECTION CARD
-
 
 class _SectionCard extends StatelessWidget {
   final String title;
@@ -367,9 +357,7 @@ class _SectionCard extends StatelessWidget {
   }
 }
 
-
 /// MODEL
-
 
 enum LessonType { video, file, quiz }
 
@@ -387,9 +375,7 @@ class LessonData {
   });
 }
 
-
 /// LESSON TILE
-
 
 class _LessonTile extends StatelessWidget {
   final LessonData data;
